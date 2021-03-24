@@ -8,5 +8,9 @@ pipeline {
                echo 'hello'
             }
         }
-        }
+       stage('Sonar Analysis'){
+         withSonarQubeEnv('sonar01'){
+            sh 'mvn sonar:sonar'}
+       }
+    }
 }
