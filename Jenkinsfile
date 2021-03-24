@@ -6,6 +6,7 @@ pipeline {
             steps {
                 sh 'mvn -B -DskipTests clean package'
                echo 'hello'
+               echo 'hello'
             }
         }
        stage('Sonar Analysis'){
